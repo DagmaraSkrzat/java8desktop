@@ -2,13 +2,13 @@ package pl.dominisz.java8desktop;
 
 public class Defibrillator {
 
-    int number;
-    String name;
-    String address;
-    String phoneNumber;
-    Point location;
+    private int number;
+    private String name;
+    private String address;
+    private String phoneNumber;
+    private Point location;
 
-    static Defibrillator createDefibrillator(String description) {
+    public static Defibrillator createDefibrillator(String description) {
         String[] tokens = description.split(";");
         Defibrillator defibrillator = new Defibrillator();
         defibrillator.number = Integer.parseInt(tokens[0]);
@@ -20,4 +20,11 @@ public class Defibrillator {
         return defibrillator;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Point getLocation() {
+        return location;
+    }
 }

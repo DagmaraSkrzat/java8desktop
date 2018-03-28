@@ -30,7 +30,7 @@ public class Solution {
         System.out.println(nearest.getName());
 
 }
-    static Defibrillator findNearest(User user,
+    public static Defibrillator findNearest(User user,
                                      List<Defibrillator> defibrillators) {
         Defibrillator minDefibrillator = defibrillators.get(0);
         double minDistance = user.getLocation()
