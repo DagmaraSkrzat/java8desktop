@@ -10,7 +10,7 @@ class PointTest {
     Point testPoint2 = new Point(3.4, 10.0);
     Point testPoint3 = new Point(2.7, 10.0);
 
-    //test dla dwóch punktów o tej samej współrzędnej X, czy leżące w tej samej długości geograficznej, ale różnej szerokości
+    //test dla dwóch punktów o tej samej współrzędnej X, czy leżące w tej samej długości geograficznej, ale różnej szerokości:
     @Test
     void distanceToTheSameLongtitude() {
         double x = (3.4 - 3.4) * Math.cos((6.7 + 10.0) / 2);
@@ -19,7 +19,7 @@ class PointTest {
         assertEquals(d, testPoint1.distanceTo(testPoint2));
     }
 
-    //test dla dwóch punktów o tej samej współrzędnej Y, czy leżące w tej samej szerokości geograficznej, ale różnej długości
+    //test dla dwóch punktów o tej samej współrzędnej Y, czy leżące w tej samej szerokości geograficznej, ale różnej długości:
     @Test
     void distanceToTheSameLatitude() {
         double x = (3.4 - 2.7) * Math.cos((10.0 + 10.0) / 2);
@@ -28,13 +28,13 @@ class PointTest {
         assertEquals(d, testPoint2.distanceTo(testPoint3));
     }
 
-    //odległość punktu od siebie samego
+    //odległość punktu od siebie samego:
     @Test
     void distanceToTheSamePoint() {
         assertEquals(0, testPoint1.distanceTo(testPoint1));
     }
 
-    //odległość punktu od punktu zerowego
+    //odległość punktu od punktu zerowego:
     @Test
     void distanceToZeroPoint() {
         Point a = new Point(0.0, 0.0);
