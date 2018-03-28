@@ -15,8 +15,7 @@ public class Defibrillator {
         defibrillator.name = tokens[1];
         defibrillator.address = tokens[2];
         defibrillator.phoneNumber = tokens[3];
-        defibrillator.location = new Point(ParseUtil.toDouble(tokens[4]),
-                ParseUtil.toDouble(tokens[5]));
+        defibrillator.location = new Point(ParseUtil.toDouble(tokens[4]), ParseUtil.toDouble(tokens[5]));
         return defibrillator;
     }
 
@@ -26,5 +25,17 @@ public class Defibrillator {
 
     public Point getLocation() {
         return location;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 }
